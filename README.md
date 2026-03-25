@@ -100,7 +100,19 @@ New logins will now receive the online UUID, which matches the renamed files.
 ### Pets and tamed animals
 Pet ownership is stored inside the pet's NBT data as the owner's UUID. After renaming player files, pets will still reference the old offline UUID and won't recognize the player as their owner.
 
-To fix this you need to edit world NBT data using **[NBTExplorer](https://github.com/jaquadro/NBTExplorer)** while the server is offline:
+There are two ways to fix this:
+
+**Option A — In-game command (server must be running)**
+
+Stand next to the pets and run:
+```
+/execute as @e[type=wolf,distance=..10] run data modify entity @s Owner set from entity @p UUID
+```
+This reassigns ownership of all wolves within 10 blocks to the nearest player. Replace `wolf` with other pet types (e.g. `cat`, `parrot`, `horse`) and adjust the distance as needed.
+
+**Option B — NBTExplorer (server must be offline)**
+
+Use **[NBTExplorer](https://github.com/jaquadro/NBTExplorer)** to edit world NBT data directly:
 - Search for the old offline UUID string in region files
 - Replace each occurrence with the new online UUID
 
