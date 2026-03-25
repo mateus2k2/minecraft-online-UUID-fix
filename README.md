@@ -1,5 +1,7 @@
 # Online UUID Fix
 
+[![Modrinth](https://img.shields.io/modrinth/dt/online-uuid-fix?label=Modrinth&logo=modrinth)](https://modrinth.com/mod/online-uuid-fix)
+
 > **Warning:** Always back up your entire world folder before installing this mod or performing any UUID migration. UUID changes affect player data, advancements, stats, and pet ownership. There is no automatic rollback.
 
 > **Note:** This mod's code was generated with the assistance of AI (Claude by Anthropic). Use it at your own risk and review the code before deploying on a production server.
