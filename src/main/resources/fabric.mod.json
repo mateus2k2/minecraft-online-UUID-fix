@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "online-uuid-fix",
+  "version": "${version}",
+  "name": "Online UUID Fix",
+  "description": "Assigns Mojang/Microsoft UUIDs to players joining an offline-mode server, keeping data consistent with online mode.",
+  "authors": ["Mateus"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": ["com.mateus.onlineuuidfix.OnlineUuidFixMod"]
+  },
+  "mixins": ["onlineuuidfix.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1"
+  }
+}
